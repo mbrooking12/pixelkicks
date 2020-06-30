@@ -48,14 +48,14 @@ $output = $engine->generate($paramRewrites, $paramType, $paramComments);
 
 	<div class="col col-1">
 
-		<textarea id="tsv-input" class="textarea" cols="100" rows="20" name="tabbed_rewrites" style="width: 100%; height: 265px;" title="TSV Input" placeholder="<?php echo htmlentities($paramRewrites) ?>"><?php // echo htmlentities($paramRewrites) ?></textarea>
+		<textarea id="tsv-input" class="textarea" cols="100" rows="20" name="tabbed_rewrites" style="width: 100%; height: 265px;" title="TSV Input"><?php echo htmlentities($paramRewrites) ?></textarea>
 		
 		<input  class="button" value="Generate!" type="submit" />
 	</div>
 
 	<div class="col col-2">
 
-		<textarea id="rewrite-output" class="textarea" cols="100" rows="20" readonly="readonly" style="width: 100%; height: 265px;<?= $engine->getLastErrorCount() > 0 ? 'background: LightPink;' : '' ?>" title="Rewrite Output" placeholder="<?php echo htmlentities($output) ?>"><?php // echo htmlentities($output) ?></textarea><br />
+		<textarea id="rewrite-output" class="textarea" cols="100" rows="20" style="width: 100%; height: 265px;<?= $engine->getLastErrorCount() > 0 ? 'background: LightPink;' : '' ?>" title="Rewrite Output"><?php echo htmlentities($output) ?></textarea><br />
 	
 	</div>
 </form>
